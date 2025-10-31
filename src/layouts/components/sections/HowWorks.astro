@@ -1,0 +1,114 @@
+---
+const steps = [
+  {
+    title: "Simula tu crédito",
+    description: "Calcula tu monto y plazo ideal en segundos.",
+    image: "/images/simula-tu-credito.svg",
+  },
+  {
+    title: "Solicita en línea",
+    description:
+      "Llena un formulario rápido y seguro desde tu computadora o celular.",
+    image: "/images/solicita-en-linea.svg",
+  },
+  {
+    title: "Recibe tu aprobación",
+    description: "Obtén respuesta ágil y sin complicaciones.",
+    image: "/images/recibe-tu-aprobacion.svg",
+  },
+];
+---
+
+<section class="section how-works">
+  <img src="/images/howworks.webp" alt="How Works" class="how-works-bg" />
+  <div class="container prt">
+    <div class="row">
+      <div class="col-12 mb-5">
+        <h2 class="pl-6 mb-3 how-works-title text-4xl font-semibold">
+          ¿Cómo funciona?
+        </h2>
+        <p class="pl-6 mb-3 font-semibold text-2xl">
+          Realiza tu solicitud en 3 sencillos pasos
+        </p>
+      </div>
+      <div class="col-12">
+        <div class="how-works-steps">
+          {
+            steps.map((step) => (
+              <Fragment key={step.title}>
+                <div class="how-works-item">
+                  <img src={step.image} alt={step.title} class="mb-2 mx-auto" />
+                  <h4>{step.title}</h4>
+                  <p>{step.description}</p>
+                </div>
+                <div class="line" />
+              </Fragment>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .how-works {
+    background: #6c883d;
+    position: relative;
+    overflow: hidden;
+  }
+  .how-works-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5;
+  }
+
+  .prt {
+    position: relative;
+    z-index: 2;
+  }
+  h2 {
+    text-shadow: 0px 3px 6px #00000029;
+  }
+
+  h4,
+  p,
+  h2 {
+    color: #fff;
+  }
+
+  .how-works-steps {
+    display: flex;
+    border-radius: 31px;
+    padding: 20px;
+    border: 2px solid #fff;
+    position: relative;
+    /* #2D5C00 to rgb */
+    /* rgb(45, 92, 0) */
+
+    background: rgba(26, 53, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .line {
+    width: 3px;
+    height: 180px;
+    background: #fff;
+    margin: auto 10px;
+  }
+
+  .line:last-child {
+    display: none;
+  }
+
+  .how-works-item {
+    padding: 20px;
+    text-align: center;
+  }
+</style>

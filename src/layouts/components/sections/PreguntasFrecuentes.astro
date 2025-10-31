@@ -1,0 +1,73 @@
+---
+import Faq from "@/layouts/function-components/Faq";
+const preguntas = [
+  {
+    title: "1. ¿Qué necesito para solicitar un crédito en Crenor?",
+    content:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+  },
+  {
+    title: "2. ¿En cuánto tiempo recibo respuesta a mi solicitud?",
+    content:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+  },
+  {
+    title: "3. ¿Crenor está regulado?",
+    content:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+  },
+  {
+    title: "4. ¿Puedo hacer todo el trámite en línea?",
+    content:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+  },
+  {
+    title: "5. ¿Qué tipo de créditos ofrecen?",
+    content:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+  },
+  {
+    title: "6. ¿Dónde se encuentra Crenor?",
+    content:
+      "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+  },
+];
+---
+
+<section class="preguntas-frecuentes">
+  <div class="preguntas-frecuentes-bg"></div>
+  <div class="container ptr">
+    <div class="row">
+      <div class="col-12 py-12">
+        <h2 class="text-center text-6xl font-bold text-sw text-primary mb-12">
+          Preguntas frecuentes
+        </h2>
+        <Faq faq_list={preguntas} client:load />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    .ptr{
+        position: relative;
+        z-index: 2;
+    }
+    .preguntas-frecuentes{
+        position: relative;
+        overflow: hidden;
+
+    }
+  .preguntas-frecuentes-bg {
+    background-image: url("/images/faq.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+</style>

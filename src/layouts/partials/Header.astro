@@ -22,7 +22,9 @@ const { pathname } = Astro.url;
   <nav class="navbar container">
     <!-- logo -->
     <div class="order-0">
-      <Logo />
+      <a href="/">
+        <img src="/images/logo-white.webp" alt="Crenor" width="100" />
+      </a>
     </div>
     <!-- navbar toggler -->
     <input id="nav-toggle" type="checkbox" class="hidden" />
@@ -116,9 +118,6 @@ const { pathname } = Astro.url;
         >
       </li>
     </ul>
-    <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex">
-      <a class="btn btn-white btn-sm" href="/signin"> Sing Up Now</a>
-    </div>
   </nav>
 </header>
 
@@ -127,20 +126,18 @@ const { pathname } = Astro.url;
     button.addEventListener("click", (e) => {
       const dropdown = e.target.nextElementSibling;
       dropdown.classList.toggle(
-        dropdown.style === "hidden" ? "block" : "hidden"
+        dropdown.style === "hidden" ? "block" : "hidden",
       );
     });
   });
 
   //sticky header
-  document.addEventListener("astro:page-load", () => {
-    const header = document.querySelector(".header");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 0) {
-        header.classList.add("header-sticky");
-      } else {
-        header.classList.remove("header-sticky");
-      }
-    });
+  const header = document.querySelector(".header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.add("header-sticky");
+    } else {
+      header.classList.remove("header-sticky");
+    }
   });
 </script>

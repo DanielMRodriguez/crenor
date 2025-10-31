@@ -12,10 +12,10 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply sticky top-0 z-50  bg-white py-6 transition-all duration-300 lg:bg-transparent;
+  @apply fixed w-full top-0 z-50  bg-white py-6 transition-all duration-300 lg:bg-transparent;
 
   &-sticky {
-    @apply bg-white shadow;
+    @apply bg-primary shadow;
   }
 }
 
@@ -36,13 +36,13 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-link {
-  @apply block p-3 py-2 text-[15px] text-dark transition hover:text-primary md:px-2 lg:inline-block;
+  @apply block p-3 py-2 text-[15px] text-white text-xl transition hover:text-primary md:px-2 lg:inline-block;
 
   &.active {
     @apply relative;
 
     &::after {
-      @apply absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-tl content-[''];
+      @apply absolute bottom-0 left-2 right-2 h-0.5 bg-white content-[''];
     }
   }
 }

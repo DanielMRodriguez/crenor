@@ -1,0 +1,95 @@
+---
+
+---
+
+<section class="section mision-vision">
+  <div class="container">
+    <div class="row justify-center items-center">
+      <div class="col-12 md:col-10">
+        <div class="mision-vision-container">
+          <div class="mision-vision-item">
+            <div class="text-center">
+                <img src="/images/vision.svg" alt="Visión" class="mision-vision-image">
+            </div>
+            <h3 class="mision-vision-title">Misión</h3>
+            <p class="mision-vision-text">
+              Brindar soluciones financieras accesibles y confiables a las
+              personas físicas en la ciudad de Chihuahua, otorgando préstamos
+              personales con transparencia, rapidez y un servicio al cliente
+              excepcional.
+            </p>
+            <p class="mision-vision-text">
+              Nuestro compromiso es impulsar el bienestar económico de nuestros
+              clientes mediante opciones de financiamiento que se adapten a sus
+              necesidades.
+            </p>
+          </div>
+          <div class="mision-vision-item">
+            <div class="text-center">
+                <img src="/images/mision.svg" alt="Misión" class="mision-vision-image">
+                
+            </div>
+            <h3 class="mision-vision-title">Visión</h3>
+            <p class="mision-vision-text">
+              Ser la sociedad financiera líder en Chihuahua, reconocida por su
+              ética, innovación y calidad en el otorgamiento de préstamos
+              personales.
+            </p>
+            <p class="mision-vision-text">
+              Buscamos consolidarnos como la primera opción para quienes
+              requieren apoyo financiero, contribuyendo al desarrollo económico
+              de nuestra comunidad y mejorando la calidad de vida de nuestros
+              clientes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    .mision-vision-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:100px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mision-vision-image{
+        width: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .mision-vision-text{
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .mision-vision-title{
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .mision-vision-item{
+        width: 100%;
+        background-color: #6C883D;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        &:hover{
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+</style>

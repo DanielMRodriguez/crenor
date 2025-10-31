@@ -1,0 +1,85 @@
+---
+import TestimonialSlider from "@/layouts/function-components/TestimonialSlider";
+const list = [
+  {
+    avatar: "",
+    author: "María G.",
+    content: "El trámite fue muy sencillo y recibí mi crédito al mismo día. Excelente servicio.",
+    organization: "",
+    rating: 5,
+  },
+  {
+    avatar: "",
+    author: "Jorge L.",
+    content: "Me explicaron todo con claridad y me sentí seguro desde el inicio. Muy recomendados.",
+    organization: "",
+    rating: 5,
+  },
+  {
+    avatar: "",
+    author: "Ana P.",
+    content: "Gracias a Crenor pude impulsar mi negocio con un préstamo rápido y justo.",
+    organization: "",
+    rating: 5,
+  },
+  {
+    avatar: "",
+    author: "Jorge L.",
+    content: "Me explicaron todo con claridad y me sentí seguro desde el inicio. Muy recomendados.",
+    organization: "",
+    rating: 5,
+  },
+  {
+    avatar: "",
+    author: "María G.",
+    content: "El trámite fue muy sencillo y recibí mi crédito al mismo día. Excelente servicio.",
+    organization: "",
+    rating: 5,
+  },
+  {
+    avatar: "",
+    author: "Ana P.",
+    content: "Gracias a Crenor pude impulsar mi negocio con un préstamo rápido y justo.",
+    organization: "",
+    rating: 5,
+  }
+];
+---
+
+<section class="testimonials bg-[#6C883D]">
+  <div class="testimonials-bg"></div>
+  <div class="container testimonials-container">
+    <div class="row">
+      <div class="col-12">
+        <TestimonialSlider client:load  list={list}/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    .testimonials{
+        padding: 100px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .testimonials-bg{
+        background-image: url("/images/estrellas.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 103%;
+        width: 103%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      
+    }
+
+    .testimonials-container{
+        position: relative;
+        z-index: 2;
+    }
+</style>

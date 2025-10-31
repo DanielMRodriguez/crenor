@@ -1,0 +1,66 @@
+---
+import CreditSelector from "@/layouts/function-components/CreditSelector.jsx";
+---
+
+<section class="section pasos">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center text-white mb-12 text-sw font-medium text-2xl">
+          En CRENOR, sabemos que cada etapa de tu vida exige soluciones
+          financieras que sean seguras, rápidas y hechas a tu medida. Por eso,
+          te ofrecemos créditos personales pensados para apoyarte en lo que más
+          importa: hacer frente a imprevistos, uni car deudas, iniciar un
+          proyecto o simplemente contar con un respaldo económico
+        </p>
+        <h2 class="text-center text-white mb-6 text-4xl font-semibold">Realiza tu solicitud en 3 sencillos pasos</h2>
+        <div class="pasos-steps">
+          {
+            [1, 2, 3].map((item) => (
+              <div class="step">
+                <p>{item}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div class="col-12 mb-6">
+        <CreditSelector client:load />
+      </div>
+      <div class="col-12">
+        <p class="text-center text-white mb-6 text-4xl font-semibold">Tu crédito con able en minutos <br class="hidden md:block"> Para personas y negocios</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .pasos {
+    background: transparent linear-gradient(240deg, #6c883d 0%, #2d5c00 100%) 0%
+      0% no-repeat padding-box;
+  }
+
+  .pasos-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin: 50px auto;
+  }
+
+  .step{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+    }
+  }
+</style>

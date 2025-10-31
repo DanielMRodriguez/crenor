@@ -1,85 +1,49 @@
 {
+  "footer_legal": [
+    {
+      "name": "Política de cobranza",
+      "url": "#"
+    },
+    {
+      "name": "Registro CONDUSEF",
+      "url": "#"
+    },
+    {
+      "name": "UNE",
+      "url": "#"
+    }
+  ],
   "main": [
     {
-      "name": "Home",
+      "name": "Inicio",
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Solicita tu crédito",
+      "url": "/solicita-tu-credito"
     },
     {
-      "name": "Blog",
-      "url": "/blog"
+      "name": "Nuestros préstamos",
+      "url": "/nuestros-prestamos"
     },
     {
-      "name": "Features",
-      "url": "/features"
-    },
-    {
-      "name": "How It Works",
-      "url": "/how-it-works"
-    },
-    {
-      "name": "Pages",
-      "url": "",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Career",
-          "url": "/career"
-        },
-
-        {
-          "name": "Integrations",
-          "url": "/integrations"
-        },
-
-        {
-          "name": "Pricing",
-          "url": "/pricing"
-        },
-        {
-          "name": "Sign In",
-          "url": "/signin"
-        },
-
-        {
-          "name": "Elements",
-          "url": "/elements"
-        },
-        {
-          "name": "Changelog",
-          "url": "/changelog"
-        },
-        {
-          "name": "Terms And Conditions",
-          "url": "/terms-and-conditions"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Quiero prestar",
+      "url": "#"
     }
   ],
 
   "footer": [
     {
-      "name": "About",
-      "url": "/about"
+      "name": "Preguntas frecuentes",
+      "url": "#"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Aviso de privacidad",
+      "url": "#"
     },
     {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Changelog",
-      "url": "/changelog"
+      "name": "Términos y condiciones",
+      "url": "#"
     }
   ]
 }

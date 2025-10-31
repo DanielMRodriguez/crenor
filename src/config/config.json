@@ -1,14 +1,14 @@
 {
   "site": {
-    "title": "Pinwheel Astro",
-    "base_url": "https://pinwheel-astro.vercel.app",
+    "title": "Crenor",
+    "base_url": "https://localhost:4321",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
+    "logo": "/images/logo.webp",
     "logo_width": "147",
     "logo_height": "31",
-    "logo_text": "Pinwheel"
+    "logo_text": "Crenor"
   },
 
   "settings": {
@@ -38,7 +38,7 @@
     "location": "2118 Thornridge Cir. Syracuse, Connecticut 35624",
     "phone": "+704-555-0127",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2023 a theme by [Themefisher](https://themefisher.com)"
+    "copyright": "Copyright© 2025 Crenor - Sitio diseñado y desarrollado por <a href='https://www.focusmedia-agency.com/'>Focus Media Agency</a>"
   },
 
   "metadata": {

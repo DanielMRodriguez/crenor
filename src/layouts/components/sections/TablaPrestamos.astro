@@ -1,0 +1,142 @@
+<section class="section tabla-prestamos">
+  <div class="tabla-prestamos-bgimage_img"></div>
+  <div class="container tabla-prestamos-container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-white text-center text-6xl text-sw font-bold mb-12">
+          Compara y elige la mejor opción
+        </h2>
+        <div class="tabla-prestamos-table">
+          <div class="tabla-prestamos-table_wrapper">
+            <!-- Header -->
+            <div class="tabla-prestamos-header">
+              <div class="text-center">Características</div>
+              <div class="text-left">Crédito personal</div>
+              <div class="text-left">Crédito negocios</div>
+            </div>
+            <!-- Body -->
+            <div class="tabla-prestamos-body">
+              <div class="tabla-prestamos-features">
+                <div>Monto disponible</div>
+                <div>Plazo</div>
+                <div>Uso del crédito</div>
+                <div>Requisitos</div>
+                <div>Tiempo de respuesta</div>
+              </div>
+              <div class="tabla-prestamos-row-wrapper">
+                <div class="tabla-prestamos-row">
+                  <div>$2,000 – $20,000</div>
+                  <div>$20,000 – 100,000</div>
+                </div>
+                <div class="tabla-prestamos-row">
+                  <div>3 – 12 meses</div>
+                  <div>3 – 12 meses</div>
+                </div>
+                <div class="tabla-prestamos-row">
+                  <div>Gastos personales</div>
+                  <div>Expansión, capital</div>
+                </div>
+                <div class="tabla-prestamos-row">
+                  <div>Comprobante de ingresos, INE</div>
+                  <div>Acta constitutiva, comprobante de ingresos</div>
+                </div>
+                <div class="tabla-prestamos-row">
+                  <div>24 – 48 horas</div>
+                  <div>24 – 48 horas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .tabla-prestamos {
+      position: relative;
+      overflow: hidden;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      background-color: #6c883d;
+    }
+    .tabla-prestamos-bgimage_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/images/mejoropcion.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+    .tabla-prestamos-container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* */
+    .tabla-prestamos-table_wrapper {
+      width: 900px;
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 16px;
+    }
+    /* Header separado con shadow */
+    .tabla-prestamos-header {
+      background-color: #00a14a;
+      border-radius: 16px;
+      box-shadow: 0px 3px 6px #00000029;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 4fr 4fr 4fr;
+      margin-bottom: 16px;
+    }
+    .tabla-prestamos-header div {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      padding: 10px;
+    }
+    /* Primera columna separada con shadow interno */
+    .tabla-prestamos-body {
+      display: grid;
+      grid-template-columns: 4fr 8fr;
+      gap: 16px;
+    }
+
+    .tabla-prestamos-features {
+      background-color: #badcc1;
+      box-shadow: inset 0px 3px 6px #00000029;
+      border-radius: 16px;
+      padding: 10px 10px 10px 30px;
+    }
+
+    .tabla-prestamos-features div {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #00a14a;
+      text-align: left;
+      padding: 10px;
+    }
+
+    .tabla-prestamos-row-wrapper
+    {
+        display: grid;
+        grid-template-columns: 4fr 4fr;
+        gap: 16px;
+    }
+    .tabla-prestamos-row-wrapper div {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #00a14a;
+        text-align: left;
+        padding: 10px;
+    }
+    /* Versión Mobile */
+  </style>
+</section>
