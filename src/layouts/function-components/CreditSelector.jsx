@@ -145,7 +145,7 @@ const CreditSelector = () => {
   };
 
   return (
-    <div className="credit-selector-container p-8 relative overflow-hidden">
+    <div className="credit-selector-container p-2 lg:p-8 relative overflow-hidden">
       {/* Main card */}
       <div className="relative bg-white rounded-2xl p-8 shadow-xl max-w-md mx-auto">
         {/* Credit Amount Section */}

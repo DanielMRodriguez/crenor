@@ -1,0 +1,179 @@
+---
+import CreditSelector from "@/layouts/function-components/CreditSelector";
+---
+
+<section class="section quiero-prestar-content">
+  <div class="container">
+    <div class="row mb-6">
+      <div class="col-12 lg:col-7">
+        <h2 class="title">¿Cómo funciona “Quiero prestar”?</h2>
+        <p class="text">
+          Haz crecer tu dinero de manera rápida, segura, y efectiva. Sin letras
+          chiquitas.
+        </p>
+
+        <ul>
+          <li>
+            Regístrate como inversionista, proceso en línea. Define el monto y
+            plazo de tu inversión.
+          </li>
+          <li>Recibe rendimiento periódico con rendimiento en línea.</li>
+          <li>Puedes usar la Calculadora e Invertir ahora.</li>
+        </ul>
+      </div>
+
+      <div class="col-12 lg:col-5">
+        <CreditSelector client:load />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 lg:col-6">
+        <h2 class="title">Crenor VS Bancos tradicionales</h2>
+
+        <div class="crenor-vs-bancos">
+          <div class="crenor-vs-bancos-banco-tradicional">
+            <p>Banco tradicional - Rendimientos bajos</p>
+          </div>
+          <div class="crenor-vs-bancos-crenor active">
+            <p>Crenor - Rendimientos atractivos y pagos puntuales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 lg:col-6">
+        <p class="text">
+          En los bancos tradicionales, las inversiones suelen ofrecer
+          rendimientos bajos y plazos poco flexibles, lo que limita el
+          crecimiento real de tu dinero. En Crenor, te ofrecen una alternativa
+          clara y accesible para que tu inversión trabaje a tu favor.
+        </p>
+        <p class="text">
+          Tus recursos se destinan directamente a financiar créditos personales
+          y de negocio, generando un impacto real en la economía local mientras
+          recibes un rendimiento más atractivo.Crenor está regulado como SOFOM y
+          supervisado por la CONDUSEF, lo que garantiza procesos transparentes,
+          pagos puntuales y la seguridad para invertir con confianza.
+        </p>
+        <p class="text">
+          Invertir con Crenor significa obtener más por tu dinero, sin
+          complicaciones y con el respaldo de una institución seria y cercana.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .title {
+    text-shadow: 0px 3px 6px #00000029;
+    font-size: 2rem;
+    color: #2d5c00;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    color: #6c883d;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+
+  ul li {
+    color: #6c883d;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .crenor-vs-bancos {
+    background: #badcc1;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .crenor-vs-bancos-banco-tradicional {
+    padding: 28px 30px;
+    box-shadow: inset 0px 3px 6px #00000029;
+    border-radius: 25px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .crenor-vs-bancos-banco-tradicional p {
+    color: #2d5c00;
+    text-shadow: 0px 3px 6px #00000029;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .crenor-vs-bancos-crenor {
+    padding: 28px 30px;
+    box-shadow: inset 0px 3px 6px #00000029;
+    border-radius: 25px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .crenor-vs-bancos-crenor P {
+    color: #2d5c00;
+    text-shadow: 0px 3px 6px #00000029;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .crenor-vs-bancos-crenor:hover,
+  .crenor-vs-bancos-banco-tradicional:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px #00000029;
+    background: #2d5c00;
+    color: #fff;
+    p {
+      color: #fff;
+    }
+  }
+
+  .crenor-vs-bancos-crenor.active,
+  .crenor-vs-bancos-banco-tradicional.active {
+    box-shadow: 0px 10px 20px #00000029;
+    background: #2d5c00;
+    color: #fff;
+    p {
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .crenor-vs-bancos {
+      margin-bottom: 50px;
+    }
+  }
+</style>
+
+<script is:inline>
+  let crenorVsBancosCrenor = document.querySelector(".crenor-vs-bancos-crenor");
+  let crenorVsBancosBancoTradicional = document.querySelector(
+    ".crenor-vs-bancos-banco-tradicional",
+  );
+
+  crenorVsBancosCrenor.addEventListener("click", () => {
+    if (crenorVsBancosCrenor.classList.contains("active")) {
+      return;
+    }
+    crenorVsBancosCrenor.classList.toggle("active");
+    crenorVsBancosBancoTradicional.classList.remove("active");
+  });
+
+  crenorVsBancosBancoTradicional.addEventListener("click", () => {
+    if (crenorVsBancosBancoTradicional.classList.contains("active")) {
+      return;
+    }
+    crenorVsBancosBancoTradicional.classList.toggle("active");
+    crenorVsBancosCrenor.classList.remove("active");
+  });
+</script>

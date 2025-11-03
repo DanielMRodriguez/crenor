@@ -3,7 +3,7 @@
   <div class="container tabla-prestamos-container">
     <div class="row">
       <div class="col-12">
-        <h2 class="text-white text-center text-6xl text-sw font-bold mb-12">
+        <h2 class="text-white text-center text-4xl lg:text-6xl text-sw font-bold mb-12">
           Compara y elige la mejor opción
         </h2>
         <div class="tabla-prestamos-table">
@@ -20,29 +20,29 @@
                 <div>Monto disponible</div>
                 <div>Plazo</div>
                 <div>Uso del crédito</div>
-                <div>Requisitos</div>
+                <div>Requisitos<p style="opacity: 0;">Acta constitutiva</p></div>
                 <div>Tiempo de respuesta</div>
               </div>
               <div class="tabla-prestamos-row-wrapper">
-                <div class="tabla-prestamos-row">
-                  <div>$2,000 – $20,000</div>
-                  <div>$20,000 – 100,000</div>
+                <div class="tabla-prestamos-row" data-feature="Monto disponible">
+                  <div data-label="Crédito personal">$2,000 – $20,000</div>
+                  <div data-label="Crédito negocios">$20,000 – $100,000</div>
                 </div>
-                <div class="tabla-prestamos-row">
-                  <div>3 – 12 meses</div>
-                  <div>3 – 12 meses</div>
+                <div class="tabla-prestamos-row" data-feature="Plazo">
+                  <div data-label="Crédito personal">3 – 12 meses</div>
+                  <div data-label="Crédito negocios">3 – 12 meses</div>
                 </div>
-                <div class="tabla-prestamos-row">
-                  <div>Gastos personales</div>
-                  <div>Expansión, capital</div>
+                <div class="tabla-prestamos-row" data-feature="Uso del crédito">
+                  <div data-label="Crédito personal">Gastos personales</div>
+                  <div data-label="Crédito negocios">Expansión, capital</div>
                 </div>
-                <div class="tabla-prestamos-row">
-                  <div>Comprobante de ingresos, INE</div>
-                  <div>Acta constitutiva, comprobante de ingresos</div>
+                <div class="tabla-prestamos-row" data-feature="Requisitos">
+                  <div data-label="Crédito personal">Comprobante de ingresos, INE</div>
+                  <div data-label="Crédito negocios">Acta constitutiva, comprobante de ingresos</div>
                 </div>
-                <div class="tabla-prestamos-row">
-                  <div>24 – 48 horas</div>
-                  <div>24 – 48 horas</div>
+                <div class="tabla-prestamos-row" data-feature="Tiempo de respuesta">
+                  <div data-label="Crédito personal">24 – 48 horas</div>
+                  <div data-label="Crédito negocios">24 – 48 horas</div>
                 </div>
               </div>
             </div>
@@ -124,19 +124,118 @@
       padding: 10px;
     }
 
-    .tabla-prestamos-row-wrapper
-    {
-        display: grid;
+    .tabla-prestamos-row-wrapper {
+      /* display: grid;
         grid-template-columns: 4fr 4fr;
-        gap: 16px;
-    }
-    .tabla-prestamos-row-wrapper div {
-        font-size: 1.2rem;
-        font-weight: 400;
-        color: #00a14a;
-        text-align: left;
+        gap: 16px; */
         padding: 10px;
     }
+
+    .tabla-prestamos-row {
+      display: grid;
+      grid-template-columns: 4fr 4fr;
+      gap: 16px;
+      padding: 10px;
+    }
+    .tabla-prestamos-row-wrapper div {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #00a14a;
+      text-align: left;
+    }
     /* Versión Mobile */
+    @media (max-width: 768px) {
+      .tabla-prestamos {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      .tabla-prestamos-table_wrapper {
+        width: 100%;
+        padding: 16px;
+      }
+
+      /* Ocultar header tradicional en mobile */
+      .tabla-prestamos-header {
+        display: none;
+      }
+
+      /* Cambiar body a layout vertical */
+      .tabla-prestamos-body {
+        display: block;
+        grid-template-columns: none;
+        gap: 0;
+      }
+
+      /* Ocultar la columna de features lateral */
+      .tabla-prestamos-features {
+        display: none;
+      }
+
+      /* Cambiar row-wrapper para mostrar tarjetas verticales */
+      .tabla-prestamos-row-wrapper {
+        padding: 0;
+      }
+
+      /* Cada fila se convierte en una tarjeta con su propia característica */
+      .tabla-prestamos-row {
+        display: block;
+        background-color: #badcc1;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: inset 0px 3px 6px #00000029;
+        position: relative;
+      }
+
+      /* Título de la característica dentro de cada tarjeta */
+      .tabla-prestamos-row::before {
+        content: attr(data-feature);
+        display: block;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #00a14a;
+        margin-bottom: 14px;
+        text-align: left;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0, 161, 74, 0.2);
+      }
+
+      /* Cada valor con su etiqueta */
+      .tabla-prestamos-row > div {
+        display: block;
+        padding: 10px 0;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #00a14a;
+        line-height: 1.5;
+      }
+
+      /* Etiqueta antes de cada valor */
+      .tabla-prestamos-row > div::before {
+        content: attr(data-label) ": ";
+        display: inline;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #00a14a;
+        opacity: 0.9;
+      }
+
+      /* Último div sin margin-bottom */
+      .tabla-prestamos-row > div:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Ajustar tamaño de fuente en mobile */
+      .tabla-prestamos-row-wrapper div {
+        font-size: 1rem;
+      }
+
+      .solicita-tu-credito{
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
   </style>
 </section>

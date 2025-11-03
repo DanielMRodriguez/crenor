@@ -1,0 +1,95 @@
+---
+const porqueCrenor = [
+  {
+    img: "/images/transparencia.svg",
+    title: "Transparencia",
+    description:
+      "En Crenor encuentras claridad en cada paso, con información abierta y sin costos ocultos.",
+  },
+  {
+    img: "/images/diversificacion.svg",
+    title: "Diversificación",
+    description:
+      "Tu dinero se distribuye en diferentes créditos, reduciendo riesgos y aumentando rendimientos.",
+  },
+  {
+    img: "/images/rendimiento.svg",
+    title: "Rendimientos competitivos",
+    description:
+      "Obtén tasas más atractivas que en un banco tradicional, con pagos puntuales.",
+  },
+  {
+    img: "/images/respaldo.svg",
+    title: "Respaldo regulado",
+    description:
+      "Crenor es una SOFOM registrada y supervisada por CONDUSEF, lo que garantiza confianza y seguridad.",
+  },
+];
+---
+
+<section class="section porque-crenor">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center text-4xl text-primary font-semibold text-sw">
+          ¿Por qué Invertir en Crenor?
+        </h2>
+      </div>
+
+      <div class="col-12">
+        <div class="porque-crenor-layout">
+          {
+            porqueCrenor.map((item) => (
+              <div class="porque-crenor-layout-item">
+                <div class="porque-crenor-layout-item-img">
+                  <img src={item.img} alt={item.title} />
+                </div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .porque-crenor-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .porque-crenor-layout-item {
+    text-align: center;
+    padding: 20px 40px;
+    h3 {
+      font-size: 30px;
+      font-weight: 600;
+      color: #2d5c00;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 400;
+      color: #2d5c00;
+    }
+  }
+  .porque-crenor-layout-item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 768px) {
+    .porque-crenor-layout {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0px;
+    }
+  }
+</style>

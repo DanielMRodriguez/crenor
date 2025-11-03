@@ -12,7 +12,8 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .header {
-  @apply fixed w-full top-0 z-50  bg-white py-6 transition-all duration-300 lg:bg-transparent;
+  @apply fixed w-full top-0 bg-primary py-6 transition-all duration-300 lg:bg-transparent;
+  z-index: 9999;
 
   &-sticky {
     @apply bg-primary shadow;
