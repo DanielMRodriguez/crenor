@@ -126,13 +126,42 @@ const { pathname } = Astro.url;
     });
   });
 
-  //sticky header
+  //sticky header y hide/show en móvil
   const header = document.querySelector(".header");
+  let lastScrollY = window.scrollY;
+  let isScrolling = false;
+
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 0) {
+    const currentScrollY = window.scrollY;
+    const isMobile = window.innerWidth < 1024; // lg breakpoint de Tailwind
+
+    // Sticky header siempre
+    if (currentScrollY > 0) {
       header.classList.add("header-sticky");
     } else {
       header.classList.remove("header-sticky");
+    }
+
+    // Hide/show en móvil basado en dirección del scroll
+    if (isMobile) {
+      if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // Scroll hacia abajo - ocultar
+            header.classList.add("header-hidden");
+          } else if (currentScrollY < lastScrollY) {
+            // Scroll hacia arriba - mostrar
+            header.classList.remove("header-hidden");
+          }
+          lastScrollY = currentScrollY;
+          isScrolling = false;
+        });
+        isScrolling = true;
+      }
+    } else {
+      // En desktop, siempre mostrar
+      header.classList.remove("header-hidden");
+      lastScrollY = currentScrollY;
     }
   });
 </script>

@@ -1,0 +1,25 @@
+---
+import FormularioComponent from "@/layouts/function-components/Formulario.jsx";
+import config from "@/config/config.json";
+
+const formAction = config.params.contact_form_action || "#";
+---
+
+<section class="section formulario">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-4xl text-center mb-12 font-semibold  text-white" id="formulario">Formulario de contacto</h2>
+      </div>
+      <div class="col-12">
+        <FormularioComponent client:load formAction={formAction} />
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+    .formulario {
+        background-color: #6C883D;
+        color: #fff;
+    }
+</style>

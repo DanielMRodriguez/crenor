@@ -142,6 +142,10 @@ const CreditSelector = () => {
         paymentFrequency: paymentFrequency
       });
     }
+
+    // scroll to formulario #formulario
+    const formulario = document.getElementById('formulario');
+    formulario.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (

@@ -18,6 +18,10 @@ input#nav-toggle:checked ~ #nav-menu {
   &-sticky {
     @apply bg-primary shadow;
   }
+
+  &-hidden {
+    @apply -translate-y-full lg:translate-y-0;
+  }
 }
 
 // navbar items
@@ -37,8 +41,11 @@ input#nav-toggle:checked ~ #nav-menu {
 }
 
 .nav-link {
-  @apply block p-3 py-2 text-[15px] text-white text-xl transition hover:text-primary md:px-2 lg:inline-block;
+  @apply block p-3 py-2 text-[15px] text-white text-xl transition md:px-2 lg:inline-block;
 
+  &:hover {
+    color: #00A14A;
+  }
   &.active {
     @apply relative;
 

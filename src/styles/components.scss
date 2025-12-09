@@ -18,10 +18,10 @@
   li {
     @apply mr-2 inline-block;
     a {
-      @apply inline-flex h-11 w-11 items-center justify-center rounded-full bg-primary text-center transition-all duration-200 hover:bg-white;
+      @apply inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary text-center transition-all duration-200 hover:bg-white;
 
       svg {
-        @apply m-auto h-11 fill-white text-xl;
+        @apply m-auto h-11 fill-white text-4xl;
       }
 
       path {
@@ -408,7 +408,7 @@ select:invalid {
     @apply h-3.5 w-3.5 bg-[#fff];
 
     &-active {
-      @apply bg-primary;
+      @apply bg-white;
     }
   }
 }
@@ -661,7 +661,7 @@ select:invalid {
   @apply relative;
 
   .swiper-pagination-bullet {
-    @apply h-[15px] w-[15px] border-2 border-white bg-transparent;
+    @apply h-[25px] w-[25px] border-2 border-white bg-transparent;
 
     &-active {
       @apply bg-white;
@@ -825,4 +825,18 @@ select:invalid {
   .page-header-content-title{
     font-size: 40px;
   }
+}
+
+.formulario-contacto .form-label{
+  color: #fff;
+}
+
+.formulario-contacto .form-control{
+  background-color: #fff;
+  color: #000;
+}
+
+.formulario-contacto .form-select{
+  background-color: #fff;
+  color: #000;
 }

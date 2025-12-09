@@ -1,16 +1,16 @@
 {
   "footer_legal": [
     {
-      "name": "Política de cobranza",
-      "url": "#"
+      "name": "Términos y condiciones",
+      "url": "/terminos-y-condiciones"
     },
     {
       "name": "Registro CONDUSEF",
-      "url": "#"
+      "url": "https://registros.condusef.gob.mx/reca/"
     },
     {
       "name": "UNE",
-      "url": "#"
+      "url": "/une"
     }
   ],
   "main": [
@@ -35,15 +35,11 @@
   "footer": [
     {
       "name": "Preguntas frecuentes",
-      "url": "#"
+      "url": "/#preguntas-frecuentes"
     },
     {
       "name": "Aviso de privacidad",
-      "url": "#"
-    },
-    {
-      "name": "Términos y condiciones",
-      "url": "#"
+      "url": "/aviso-de-privacidad"
     }
   ]
 }

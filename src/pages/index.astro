@@ -9,11 +9,16 @@ import PreguntasFrecuentes from "@/layouts/components/sections/PreguntasFrecuent
 import Impulsamos from "@/layouts/components/sections/Impulsamos.astro";
 import Direccion from "@/layouts/components/sections/Direccion.astro";
 import MisionVision from "@/layouts/components/sections/MisionVision.astro";
+import Formulario from "@/layouts/components/sections/Formulario.astro";
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner, key_features, service, testimonial } = homepage.data;
 ---
 
-<Base>
+<Base
+  title="Créditos Personales y para PyMEs en México | Crenor"
+  meta_title="Créditos Personales y para PyMEs en México | Crenor"
+  description="Solicita crédito fácil, seguro y rápido. Crenor impulsa tu crecimiento con opciones flexibles de financiamiento para personas y negocios."
+>
   <PageHeader />
   <HowWorks />
   <WhyCrenor />
@@ -22,4 +27,5 @@ const { banner, key_features, service, testimonial } = homepage.data;
   <Impulsamos />
   <MisionVision />
   <Direccion />
+  <Formulario />
 </Base>
